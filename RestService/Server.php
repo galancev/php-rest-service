@@ -895,6 +895,10 @@ class Server
             $callable = $pMethod;
         }
 
+        if ($pController->isNeedAuth($pMethod)) {
+            $pController->showAuth();
+        }
+
         if ($callable) {
             try {
                 return $this->send(call_user_func_array($callable, $pArguments));

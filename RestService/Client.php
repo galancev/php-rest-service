@@ -38,7 +38,7 @@ class Client
      * @var Server
      *
      */
-    private $controller;
+    protected $controller;
 
     /**
      * Custom set http method.
@@ -48,7 +48,7 @@ class Client
     private $method;
 
 
-    private static $statusCodes = array(
+    protected static $statusCodes = array(
         100 => 'Continue',
         101 => 'Switching Protocols',
         200 => 'OK',
